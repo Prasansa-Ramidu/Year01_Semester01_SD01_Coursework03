@@ -1,0 +1,99 @@
+# Import required libraries
+import tkinter as tk
+from tkinter import ttk
+import json
+from datetime import datetime
+
+# Define a class for the Personal Finance Tracker GUI
+class FinanceTrackerGUI:
+    # Constructor method
+    def __init__(self, root):
+        # Initialize the root window and other GUI components
+        Create main window titled "Personal Finance Tracker"
+        Create widgets
+        Load transactions from file "transactions.json"
+
+    # Method to create GUI widgets
+    def create_widgets(self):
+        Create a frame for table and scrollbar
+        Create a Treeview for displaying transactions with columns "amount" and "date"
+        Create headings for columns
+        Create a scrollbar for the Treeview
+        Create a search bar and button
+        Create sort buttons for sorting by amount and date
+        Create input fields for adding, updating, and deleting transactions
+        Create buttons for adding, updating, resetting, displaying summary, and deleting transactions
+
+    # Method to load transactions from file
+    def load_transactions(self, filename):
+        Try to open the file "transactions.json"
+        If file is found:
+            Load transactions from JSON format
+            Display transactions in the Treeview
+        If file is not found or format is incorrect:
+            Display appropriate error message
+
+    # Method to save transactions to file
+    def save_transactions(self):
+        Try to open the file "transactions.json" in write mode
+        If file is successfully opened:
+            Save transactions in JSON format
+        If an error occurs:
+            Display error message
+
+    # Method to display transactions in the Treeview
+    def display_transactions(self, transactions):
+        Clear existing entries in the Treeview
+        Iterate through transactions and insert them into the Treeview
+
+    # Method to search transactions
+    def search_transactions(self, query):
+        Clear existing entries in the Treeview
+        Iterate through transactions
+        If query matches transaction amount or date:
+            Insert transaction into the Treeview
+
+    # Method to sort transactions by column
+    def sort_by_column(self, col, reverse):
+        Sort transactions based on the selected column and order
+        Display sorted transactions in the Treeview
+
+    # Method to add a new transaction
+    def add_transaction(self):
+        Get input values for amount and date
+        Validate input and determine transaction category
+        Add the new transaction to the transactions dictionary
+        Save transactions to file and update the display
+
+    # Method to update an existing transaction
+    def update_transaction(self):
+        Get input values for amount, date, and transaction ID
+        Validate input and update the specified transaction
+        Save transactions to file and update the display
+
+    # Method to display a summary of transactions
+    def display_summary(self):
+        Iterate through transactions
+        Calculate total amounts for each transaction category
+        Display the summary in the console
+
+    # Method to delete a transaction
+    def delete_transaction(self):
+        Get input values for amount, date, and transaction ID
+        Validate input and delete the specified transaction
+        Save transactions to file and update the display
+
+    # Method to reset input fields
+    def reset(self):
+        Clear input fields for amount, date, and transaction ID
+
+# Main function to create the GUI and run the application
+def main():
+    Create Tkinter root window
+    Initialize the FinanceTrackerGUI object with the root window
+    Display transactions in the GUI
+    Start the Tkinter event loop
+
+# Entry point of the program
+if __name__ == "__main__":
+    Call the main function to start the application
